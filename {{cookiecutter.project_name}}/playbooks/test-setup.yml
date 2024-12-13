@@ -1,0 +1,22 @@
+---
+- name: Test Ansible Server Setup
+  hosts: localhost
+  gather_facts: yes
+
+  tasks:
+    - name: Check system uptime
+      command: uptime
+      register: uptime_output
+
+    - name: Display uptime
+      debug:
+        msg: "Uptime of the system is: {{ uptime_output.stdout }}"
+
+    - name: Retrieve IP address of localhost
+      command: hostname -I
+      register: ip_output
+
+    - name: Display IP address
+      debug:
+        msg: "The IP address of localhost is: {{ ip_output.stdout }}"
+

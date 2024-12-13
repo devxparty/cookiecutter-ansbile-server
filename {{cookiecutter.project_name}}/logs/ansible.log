@@ -1,0 +1,24 @@
+2024-12-13 10:24:05,379 p=2643 u=ansible n=ansible | [WARNING]: Unable to parse /home/ansible/localprojects/cookiecutter/cookiecutter-ansible-
+server/{{cookiecutter.project_name}}/inventory/hosts as an inventory source
+
+2024-12-13 10:24:05,379 p=2643 u=ansible n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-12-13 10:24:05,383 p=2643 u=ansible n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-12-13 10:24:05,531 p=2643 u=ansible n=ansible | PLAY [Test Ansible Server Setup] **********************************************************************************************************
+2024-12-13 10:24:05,540 p=2643 u=ansible n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2024-12-13 10:24:06,607 p=2643 u=ansible n=ansible | ok: [localhost]
+2024-12-13 10:24:06,637 p=2643 u=ansible n=ansible | TASK [Check system uptime] ****************************************************************************************************************
+2024-12-13 10:24:06,858 p=2643 u=ansible n=ansible | changed: [localhost]
+2024-12-13 10:24:06,867 p=2643 u=ansible n=ansible | TASK [Display uptime] *********************************************************************************************************************
+2024-12-13 10:24:06,893 p=2643 u=ansible n=ansible | ok: [localhost] => {
+    "msg": "Uptime of the system is:  10:24:06 up 47 min,  0 users,  load average: 0.02, 0.02, 0.00"
+}
+2024-12-13 10:24:06,901 p=2643 u=ansible n=ansible | TASK [Retrieve IP address of localhost] ***************************************************************************************************
+2024-12-13 10:24:07,055 p=2643 u=ansible n=ansible | changed: [localhost]
+2024-12-13 10:24:07,064 p=2643 u=ansible n=ansible | TASK [Display IP address] *****************************************************************************************************************
+2024-12-13 10:24:07,088 p=2643 u=ansible n=ansible | ok: [localhost] => {
+    "msg": "The IP address of localhost is: 172.236.115.156 192.168.134.67 172.17.0.1 2600:3c06::f03c:95ff:fe3b:76e6 "
+}
+2024-12-13 10:24:07,104 p=2643 u=ansible n=ansible | PLAY RECAP ********************************************************************************************************************************
+2024-12-13 10:24:07,104 p=2643 u=ansible n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
