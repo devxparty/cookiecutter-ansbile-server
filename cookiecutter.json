@@ -2,6 +2,9 @@
     "project_name": "ansible-server",
     "author_name": "James Knott",
     "ansible_version": "2.15.3",
-    "description": "An Ansible control node for managing infrastructure"
+    "description": "An Ansible control node for managing infrastructure",
+    "_copy_without_render": [
+        "playbooks/*.yml"
+    ]
 }
 
