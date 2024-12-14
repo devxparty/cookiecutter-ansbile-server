@@ -10,4 +10,4 @@ web_packages:
   - php-fpm
 
 # Directory for web application deployment
-web_root: "{{ deploy_dir }}/html"
+web_root: "/var/www/html"
