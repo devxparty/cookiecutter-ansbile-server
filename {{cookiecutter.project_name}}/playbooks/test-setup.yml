@@ -1,6 +1,6 @@
 ---
 - name: Test Ansible Server Setup
-  hosts: localhost
+  hosts: test
   gather_facts: yes
 
   tasks:

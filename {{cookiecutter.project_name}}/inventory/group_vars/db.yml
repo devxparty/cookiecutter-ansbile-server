@@ -1,0 +1,15 @@
+# group_vars/db.yml
+---
+# Database-specific settings
+db_port: 3306
+db_user: admin
+db_password: securepassword
+db_name: my_database
+
+# Database engine type
+db_engine: mysql
+
+# Package list for database servers
+db_packages:
+  - mysql-server
+  - mysql-client

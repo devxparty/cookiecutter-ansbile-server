@@ -22,3 +22,50 @@ server/{{cookiecutter.project_name}}/inventory/hosts as an inventory source
 }
 2024-12-13 10:24:07,104 p=2643 u=ansible n=ansible | PLAY RECAP ********************************************************************************************************************************
 2024-12-13 10:24:07,104 p=2643 u=ansible n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-13 22:20:43,172 p=12283 u=ansible n=ansible | Encryption successful
+2024-12-13 22:28:19,300 p=12532 u=ansible n=ansible | Starting galaxy role install process
+2024-12-13 22:28:19,639 p=12532 u=ansible n=ansible | - downloading role 'ansible-role-golang', owned by gantsign
+2024-12-13 22:28:19,978 p=12532 u=ansible n=ansible | - downloading role from https://github.com/gantsign/ansible-role-golang/archive/3.2.3.tar.gz
+2024-12-13 22:28:20,458 p=12532 u=ansible n=ansible | - extracting gantsign.ansible-role-golang to /home/ansible/localprojects/cookiecutter/cookiecutter-ansible-server-main/{{cookiecutter.project_name}}/roles/gantsign.ansible-role-golang
+2024-12-13 22:28:20,498 p=12532 u=ansible n=ansible | - gantsign.ansible-role-golang (3.2.3) was installed successfully
+2024-12-13 22:31:07,121 p=12652 u=ansible n=ansible | Starting galaxy role install process
+2024-12-13 22:31:07,300 p=12652 u=ansible n=ansible | - downloading role 'rustup_init', owned by ableton
+2024-12-13 22:31:07,664 p=12652 u=ansible n=ansible | - downloading role from https://github.com/Ableton/ansible-role-rustup-init/archive/0.0.3.tar.gz
+2024-12-13 22:31:08,081 p=12652 u=ansible n=ansible | - extracting ableton.rustup_init to /home/ansible/localprojects/cookiecutter/cookiecutter-ansible-server-main/{{cookiecutter.project_name}}/roles/ableton.rustup_init
+2024-12-13 22:31:08,084 p=12652 u=ansible n=ansible | - ableton.rustup_init (0.0.3) was installed successfully
+2024-12-13 22:48:46,774 p=13110 u=ansible n=ansible | PLAY [Test Ansible Server Setup] *********************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:48:46,781 p=13110 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:48:46,871 p=13110 u=ansible n=ansible | fatal: [ansible-test-demo-01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '172.232.10.186' (ED25519) to the list of known hosts.\r\nno such identity: /home/ansible/.ssh/id_rsa: No such file or directory\r\nansible@172.232.10.186: Permission denied (publickey,password).", "unreachable": true}
+2024-12-13 22:48:46,873 p=13110 u=ansible n=ansible | fatal: [ansible-devxparty-demo-01]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '172.236.115.156' (ED25519) to the list of known hosts.\r\nno such identity: /home/ansible/.ssh/id_rsa: No such file or directory\r\nansible@172.236.115.156: Permission denied (publickey,password).", "unreachable": true}
+2024-12-13 22:48:46,874 p=13110 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:48:46,874 p=13110 u=ansible n=ansible | ansible-devxparty-demo-01  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-13 22:48:46,875 p=13110 u=ansible n=ansible | ansible-test-demo-01       : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-13 22:55:14,881 p=13640 u=ansible n=ansible | PLAY [Test Ansible Server Setup] *********************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:55:14,888 p=13640 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:55:16,353 p=13640 u=ansible n=ansible | ok: [ansible-test-demo-01]
+2024-12-13 22:55:16,459 p=13640 u=ansible n=ansible | ok: [ansible-devxparty-demo-01]
+2024-12-13 22:55:16,486 p=13640 u=ansible n=ansible | TASK [Check system uptime] ***************************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:55:16,803 p=13640 u=ansible n=ansible | changed: [ansible-test-demo-01]
+2024-12-13 22:55:16,865 p=13640 u=ansible n=ansible | changed: [ansible-devxparty-demo-01]
+2024-12-13 22:55:16,873 p=13640 u=ansible n=ansible | TASK [Display uptime] ********************************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:55:16,903 p=13640 u=ansible n=ansible | ok: [ansible-test-demo-01] => {
+    "msg": "Uptime of the system is:  22:55:16 up 17 min,  1 user,  load average: 0.00, 0.09, 0.18"
+}
+2024-12-13 22:55:16,919 p=13640 u=ansible n=ansible | ok: [ansible-devxparty-demo-01] => {
+    "msg": "Uptime of the system is:  22:55:16 up 13:18,  1 user,  load average: 0.10, 0.05, 0.01"
+}
+2024-12-13 22:55:16,929 p=13640 u=ansible n=ansible | TASK [Retrieve IP address of localhost] **************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:55:17,133 p=13640 u=ansible n=ansible | changed: [ansible-test-demo-01]
+2024-12-13 22:55:17,172 p=13640 u=ansible n=ansible | changed: [ansible-devxparty-demo-01]
+2024-12-13 22:55:17,181 p=13640 u=ansible n=ansible | TASK [Display IP address] ****************************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:55:17,210 p=13640 u=ansible n=ansible | ok: [ansible-test-demo-01] => {
+    "msg": "The IP address of localhost is: 172.232.10.186 192.168.140.116 172.17.0.1 2600:3c06::f03c:95ff:fe3b:c454 "
+}
+2024-12-13 22:55:17,226 p=13640 u=ansible n=ansible | ok: [ansible-devxparty-demo-01] => {
+    "msg": "The IP address of localhost is: 172.236.115.156 192.168.134.67 172.17.0.1 2600:3c06::f03c:95ff:fe3b:76e6 "
+}
+2024-12-13 22:55:17,243 p=13640 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-12-13 22:55:17,243 p=13640 u=ansible n=ansible | ansible-devxparty-demo-01  : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-13 22:55:17,243 p=13640 u=ansible n=ansible | ansible-test-demo-01       : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-13 22:56:25,766 p=14050 u=ansible n=ansible | ERROR! 'cookiecutter' is undefined
+2024-12-13 22:56:44,165 p=14112 u=ansible n=ansible | ERROR! 'cookiecutter' is undefined

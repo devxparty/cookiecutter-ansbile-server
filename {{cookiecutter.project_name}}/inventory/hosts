@@ -1,0 +1,33 @@
+# Global Defaults
+[all:vars]
+ansible_user=ansible
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+ansible_python_interpreter=/usr/bin/python3
+
+[test]
+ansible-test-demo-01 ansible_host=172.232.10.186
+
+
+# Group 1: Web Servers
+[web]
+web01.example.com ansible_host=192.168.1.101
+web02.example.com ansible_host=192.168.1.102
+
+# Group 2: Database Servers
+[db]
+db01.example.com ansible_host=192.168.1.201
+db02.example.com ansible_host=192.168.1.202
+
+# Group 3: Load Balancer
+[load_balancer]
+lb01.example.com ansible_host=192.168.1.50
+
+# Multi-group Configuration
+# 'staging' group includes 'web' and 'db'
+[staging:children]
+web
+db
+
+# An example with a host alias
+[custom_group]
+app01 ansible_host=192.168.1.150 ansible_user=custom_user

@@ -1,0 +1,7 @@
+---
+- name: Deploy Golang and Rust Roles
+  hosts: test
+  become: yes  # Ensures the role runs with root privileges if required
+  roles:
+    - ableton.rustup_init
+    - gantsign.ansible-role-golang

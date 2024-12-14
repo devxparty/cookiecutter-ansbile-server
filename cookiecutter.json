@@ -1,5 +1,5 @@
 {
-    "project_name": "ansible-server",
+    "project_name": "ansible-control-server",
     "author_name": "James Knott",
     "ansible_version": "2.15.3",
     "description": "An Ansible control node for managing infrastructure",

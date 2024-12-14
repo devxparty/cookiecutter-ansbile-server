@@ -1,0 +1,13 @@
+# group_vars/web.yml
+---
+# Web server-specific settings
+http_port: 80
+https_port: 443
+
+# Package list for web servers
+web_packages:
+  - nginx
+  - php-fpm
+
+# Directory for web application deployment
+web_root: "{{ deploy_dir }}/html"

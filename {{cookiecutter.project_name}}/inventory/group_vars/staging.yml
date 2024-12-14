@@ -1,0 +1,9 @@
+# group_vars/staging.yml
+---
+# Override some global variables for staging
+deploy_dir: /var/www/staging
+backup_dir: /var/backups/staging
+
+# Additional debugging settings
+debug_mode: true
+log_level: verbose
